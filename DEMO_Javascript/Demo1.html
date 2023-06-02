@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // get current time
+        var currentTime = new Date();
+
+        // get the hour of the current time
+        var currentHour = currentTime.getHours();
+
+        console.log("The current time is " + currentTime);
+        console.log("The current hour is " + currentHour);
+
+        // specify the condition for different outputs
+        if(currentHour < 12) {
+            document.writeln("Good Morning!");
+        }else {
+            document.writeln("Good afternoon!");
+        }
+
+    </script>
+
+    <script>
+        // calculate and display students' GPA
+        // use a loop struture to get student grades
+        var studentGrade = 0;
+        var studentSum = 0;
+        var studentCount = 0;
+        while(studentGrade>=0){
+            studentGrade = Number(window.prompt("Student Grade (enter -1 to stop): "));
+            if(studentGrade>=0){
+                studentSum += studentGrade;
+                studentCount++;
+            }
+            
+        }
+        var gpa = studentSum/studentCount
+        document.writeln('<br>The GPA for the class is ' + gpa);
+
+        // calculate gpa = sum(grades)/count(grades)
+        // display gpa
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- Fig 4.6: advanced.html -->
+<!-- Inheritance in style sheets. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>CSS Font and Text demo</title>
+      <style>
+         body {font-family: Arial, Helvetica, sans-serif;}
+         li em {font-weight: bold;
+            font-size: larger;
+         }
+         h1 {font-style: italic;
+            text-align: center;
+            color: aquamarine;       
+         }
+         a.nodec {text-decoration: none;}
+         a.nodec:hover {text-decoration: underline;}
+         p.desc {
+            text-indent: 20px;
+            background-color: beige;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            margin: 100px;
+            padding-bottom: 10px;
+            margin-left: 20px;
+         }
+         
+      </style>
+   </head>
+   <body>
+      <h1>Shopping list for Monday:</h1>
+
+      <ul>
+         <li class="nodec">Milk</li>
+         <li>Bread
+            <ul>
+               <li>White bread</li>
+               <li>Rye bread</li>
+               <li id="wholebread">Whole wheat bread</li>
+            </ul>
+         </li>
+         <li>Carrots</li>
+         <li>Yogurt</li>
+         <li>Pizza <em>with mushrooms</em></li>
+      </ul>
+
+      <p class="desc">
+        The U.S. Environmental Protection Agency has recognized the company
+        with a 2015 ENERGY STAR Partner of the Year – Energy Management Award
+        for its outstanding efforts and actions to improve the energy
+        efficiency of its buildings and facilities.
+      </p>
+
+      <p><em>Go to the</em>
+         <a class = "nodec" href = "http://www.deitel.com">
+            Grocery store</a>
+      </p>
+
+   </body>
+</html>
+
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Client-side input validation</title>
+    <style>
+        /*the CSS style applies to all html elements with class='error'*/
+        .error {
+            color: red;
+            font-weight: 100;
+        }
+        .errorLabel{
+            color: red;
+            font-weight: bold;
+        }
+        .questions{
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function checkInputs(event) {
+            // delete the warning message
+            error_doc = document.getElementsByClassName('error')
+            errorlabel = document.getElementsByClassName('errorLabel')
+            len1 = error_doc.length
+            len2 = errorlabel.length
+            for (i=len1-1; i>=0; i--){
+                error_doc[i].remove()
+            }
+            for (i=len2-1; i>=0; i--){
+                errorlabel[i].className = 'questions'
+            }
+
+            //console.log("in the function");
+            var frmObject = document.forms[0];
+            var output = "Please correct the errors on the page.";
+            var checkError = false;
+
+            //check the full name text box.
+            //If there is an error, set checkError to true and add a new text node for the error message
+            if (frmObject.fullName.value == "") {
+                //update the checkError value to true
+                checkError = true;
+
+                //change the label element to red color
+                var parentNode = document.getElementById('theName');
+                var childNode = document.createElement('div');
+                var textNode = document.createTextNode('Please enter a name.');
+                childNode.className = 'error'
+                parentNode.className = 'errorLabel';
+
+                //add a new div element as a child node of the div element with id theName
+                childNode.appendChild(textNode);
+                parentNode.appendChild(childNode);
+            }
+
+            //check the address text area
+            //If there is an error, set checkError to true and add a new text node for the error message
+            if (frmObject.address.value == '') {
+                checkError = true;
+
+                var parentNode = document.getElementById('theAddress');
+                var childNode = document.createElement('div');
+                var textNode = document.createTextNode('Please enter your address');
+                childNode.className = 'error';
+                parentNode.className = 'errorLabel';
+
+                childNode.appendChild(textNode);
+                parentNode.appendChild(childNode);
+            }
+
+            //check the gender radio button
+            //If there is an error, set checkError to true and add a new text node for the error message
+            if (frmObject.gender.value == '') {
+                checkError = true;
+
+                var parentNode = document.getElementById('thegender');
+                var childNode = document.createElement('div');
+                var textNode = document.createTextNode('Please select your gender');
+                childNode.className = 'error';
+                document.getElementById('gender').className = 'errorLabel';
+
+                childNode.appendChild(textNode);
+                parentNode.appendChild(childNode);
+            }
+
+            //check the major dropdown selection
+            //If there is an error, set checkError to true and add a new text node for the error message
+            if (frmObject.major.value == '') {
+                checkError = true;
+
+                var parentNode = document.getElementById('themajor');
+                var childNode = document.createElement('div');
+                var textNode = document.createTextNode('Please select your major');
+                childNode.className = 'error';
+                parentNode.className = 'errorLabel';
+
+                childNode.appendChild(textNode);
+                parentNode.appendChild(childNode);
+            }
+
+            //check the date of birth input value
+            //If there is an error, set checkError to true and add a new text node for the error message
+            if (frmObject.year.value < 1900 || frmObject.year.value > 2022 || frmObject.year.value == '') {
+                checkError = true;
+
+                var parentNode = document.getElementById('theyear');
+                var childNode = document.createElement('div');
+                var textNode = document.createTextNode('Please enter your birthday correctly');
+                childNode.className = 'error';
+                document.getElementById('year').className = 'errorLabel';
+
+                childNode.appendChild(textNode);
+                parentNode.appendChild(childNode);
+            }
+
+
+            //stop the event from continuing if errors exist
+            if (checkError) {
+                event.preventDefault()
+
+            }
+            document.getElementById("output").innerHTML = output;
+        }
+
+        function init() {
+            //specify the function checkInputs as the event listner for the submit event of the form element
+            //first get the reference to the form element
+            var form1 = document.getElementsByTagName("form")[0];
+            //then define an event handler for the submit event of the form object
+            form1.addEventListener("submit", checkInputs)
+
+        }
+
+        //Define the DOMContentLoaded event handler, which will be triggered after the document finishes loading
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+
+<body>
+    <h2>Let me know you, my friend!</h2>
+    <form name="myForm" method="post" action="success.html">
+        <br>
+        <div id="theName">
+            <strong>Full Name:</strong><br />
+            <input type="text" name="fullName" size="20" /><br />
+        </div>
+
+        <div id="theAddress">
+            <strong>Address:</strong><br />
+            <textarea name="address" rows="3" cols="25"></textarea><br />
+        </div>
+
+        <div id="gender"><strong>Gender:</strong></div>
+        <div id="thegender">
+            <input type="radio" name="gender" value="male" />Male
+            <input type="radio" name="gender" value="female" />Female
+            <input type="radio" name="gender" value="other" />Other
+            <input type="radio" name="gender" value="notdisclosed" />Prefer not to say<br />
+        </div>
+        <br />
+        <div id="themajor"><strong>What is your major of study or area of expertise?</strong>
+            <select name="major">
+                <option value="" selected>Undecided</option>
+                <option value="ACC">Accounting</option>
+                <option value="MIS">Information Systems</option>
+                <option value="FIN">Finance</option>
+                <option value="MKTG">Marketing</option>
+                <option value="MGT">Management</option>
+                <option value="OTH">Others</option>
+            </select>
+        </div>
+        <br />
+        <div id="year"><strong>What is your date of birth?</strong>
+        </div>
+        <div id="theyear">
+            <input type="number" name="year" size="20" /><br />
+        </div>
+        <br>
+        <input type="submit" name="submit" value="Submit" />
+        <div id="output"></div>
+    </form>
+</body>
+
+</html>

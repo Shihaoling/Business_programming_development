@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Client-side input validation example</title>
+	<style>
+		.error {
+			color: red;
+		}
+	</style>
+
+	<script>
+		function checkInput() {
+			var hasError = false;
+			// check if a name is provided, fullname
+			var namevalue = document.forms[0].fullName.value;
+			if (namevalue == "") {
+				hasError = true;
+				// only create an error node if the element with id=name error does not exist
+
+				var parentNode = document.getElementById("nameinput")
+				var childNode = document.createElement("div");
+				var textNode = document.createTextNode("Please enter a name.")
+				// childNode.className = "error"
+				childNode.setAttribute("class", "error")
+				childNode.appendChild(textNode);
+				// childNode is the parent node of textNode
+				parentNode.appendChild(childNode)
+			}
+			
+			//check address
+
+			//check coop
+			
+			//...
+
+			//check gradexam checkboxes
+			var gradexamInput = document.forms[0].gradexam;
+			var isChecked = false;
+
+			for(var i=0; i<gradexamInput.length; i++){
+				if(gradexamInput[i].checked){
+					isChecked = true;
+					break;
+				}
+			}
+			if(isChecked==false){
+				var parentNode = document.getElementById("test")
+				var childNode = document.createElement("div");
+				var textNode = document.createTextNode("Please select at least one exam option.")
+				childNode.setAttribute("class", "error")
+				childNode.appendChild(textNode);
+				parentNode.appendChild(childNode)
+			}
+
+			//if erroe are found, stop the submit event
+			if(hasError){
+				event.preventDefault();
+			}
+		}
+		function init() {
+			//set up an event handler for the form submit event
+			var x = document.forms[0]; //documnet.getElementsByTagName("form")[0];
+			x.addEventListener("submit", checkInput);
+		}
+
+		document.addEventListener("DOMContentLoaded", init)
+	</script>
+</head>
+
+<body>
+	<h2>Please fill out the following form; all fields are required</h2>
+	<form name="myForm" method="post" action="http://www.vt.edu">
+		<div id="nameinput">
+			<strong>Full Name:</strong><br />
+			<input type="text" name="fullName" size="20" /><br />
+		</div>
+
+		<strong>Address:</strong><br />
+		<textarea name="address" rows="3" cols="25"></textarea><br /><br />
+
+		<div>Are you a co-op?</div>
+		<input type="radio" name="coop" value="yes" />Yes
+		<input type="radio" name="coop" value="no" />No<br /><br />
+
+		<div>Are you going to grad school?</div>
+		<input type="radio" name="gradSchool" value="yes" />Yes
+		<input type="radio" name="gradSchool" value="no" />No<br /><br />
+
+		<div id="test">
+			Which of the following graduate entrance exam have you taken?<br />
+			(You must select at least one) <br />
+			<input type="checkbox" name="gradexam" value="donor" />GMAT&nbsp; <br />
+			<input type="checkbox" name="gradexam" value="sports" />GRE&nbsp;<br />
+		</div>
+		<input type="submit" name="button1" value="Submit" />
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+    <script>
+        $(function () {
+            setInterval(updateTime, 1000)
+            $('#clock').click(
+                function(){
+                    // change to a different color
+                    if ($('#clock').hasClass('red')){
+                        $('#clock').removeClass('red').addClass('blue');
+                    } else if($('#clock').hasClass('blue')){
+                        $('#clock').removeClass('blue').addClass('green')
+                    } else if ($('#clock').hasClass('green')){
+                        $('#clock').removeClass('green').addClass('red')
+                    } else{
+                        $('#clock').addClass('red')
+                    }
+                }
+            )
+
+        })
+        function updateTime() {
+            // This function is used to update the time
+            // get the current time
+            var currentTime = new Date();
+
+            // get the hours, minutes, and second values
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            // update the h1 element content
+            $('#clock').html(hours + ':' + minutes + ':' + seconds);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="clock">00:00:00</h1>
+</body>
+
+</html>

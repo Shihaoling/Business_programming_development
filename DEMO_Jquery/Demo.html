@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        // document ready function
+        $(function(){
+            // $(selector:filter).action()
+            $("a").click(function(){
+                if(!confirm("Do you want to leave the page?")){
+                    event.preventDefault()
+                }
+            })
+
+            // image swapping for the hover event
+            $('#firstimage').hover(
+                function(){
+                    // handles the mouseenter event
+                    $('#firstimage').attr('src', 'foreground_image.png')
+
+                }
+                ,function(){
+                    // handles the mouseout event
+                    $('#firstimage').attr('src', 'background_image.png')
+                }
+            )
+
+            // form submit event handler
+            $("form").submit(
+                function(){
+                    var x = $('#nameinput').val()
+                    window.alert(x)
+                }
+            )
+        })
+    </script>
+</head>
+
+<body>
+    <h1><a href="https://www.swufe.edu.cn">SWUFE</a></h1>
+    <br>
+    <img id = 'firstimage'src="background_image.png" alt="">
+
+    <form method='post' action="#">
+        <label for="">
+            <input type="text" name="'fullName" id="nameinput">
+        </label>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
