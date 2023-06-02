@@ -38,12 +38,16 @@
 			var gradexamInput = document.forms[0].gradexam;
 			var isChecked = false;
 
-			for(var i=0; i<gradexamInput.length; i++){
-				if(gradexamInput[i].checked){
-					isChecked = true;
-					break;
-				}
+			// for(var i=0; i<gradexamInput.length; i++){
+			// 	if(gradexamInput[i].checked){
+			// 		isChecked = true;
+			// 		break;
+			// 	}
+			// }
+			if (gradexamInput.value != ['']){
+				isChecked = true
 			}
+
 			if(isChecked==false){
 				var parentNode = document.getElementById("test")
 				var childNode = document.createElement("div");
