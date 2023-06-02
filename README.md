@@ -1,2 +1,2 @@
-# Business_programming_development
- The collection of homework for MISY350 in SWUFE-UD
+# MISY350
+ The collection of homework, demo files and slides for Course MISY350
