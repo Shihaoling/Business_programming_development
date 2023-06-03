@@ -29,36 +29,33 @@
             return diff / 1000;
         }
 
-        function CountDownClock() {
 
-            setInterval(updateTime, 1000);
+        function updateTime() {
 
-            function updateTime() {
+            // get the time difference
+            var current_time = new Date();
+            var pre_time = new Date('June 16, 2023');
+            var diff = getTimeDiff(pre_time, current_time)
 
-                // get the time difference
-                var current_time = new Date();
-                var pre_time = new Date('June 16, 2023');
-                var diff = getTimeDiff(pre_time, current_time)
+            // figure out days, hours, minutes, seconds
+            var day = Math.floor(diff / (60 * 60 * 24))
+            var diff_hour = (diff - day * 3600 * 24)
+            var hour = Math.floor(diff_hour / 3600)
+            var diff_min = (diff_hour - hour * 3600)
+            var min = Math.floor(diff_min / 60)
+            var diff_second = (diff_min - min * 60)
+            var second = Math.floor(diff_second)
 
-                // figure out days, hours, minutes, seconds
-                var day = Math.floor(diff / (60 * 60 * 24))
-                var diff_hour = (diff - day * 3600 * 24)
-                var hour = Math.floor(diff_hour / 3600)
-                var diff_min = (diff_hour - hour * 3600)
-                var min = Math.floor(diff_min / 60)
-                var diff_second = (diff_min - min * 60)
-                var second = Math.floor(diff_second)
-
-                // update the html element for the run down clock
-                $('#running_clock:first').html(day + ' days ' + hour + ' hours ' + min + ' minutes ' + second + ' seconds')
-            }
+            // update the html element for the run down clock
+            $('#running_clock:first').html(day + ' days ' + hour + ' hours ' + min + ' minutes ' + second + ' seconds')
         }
+
 
         // window.addEventListener('load', CountDownClock)
         $(function () {
 
             // set fadeOut() function
-            setInterval(CountDownClock, 1000);
+            setInterval(updateTime, 1000);
             $('#running_clock').dblclick(function () {
                 $(this).fadeOut()
             })
@@ -77,6 +74,17 @@
             })
 
             // Images Swapping
+            $('img.swap_image').mouseenter(function () {
+                $(this).attr('src', 'Virginia_tech.png')
+                $(this).attr('width', '420px')
+                $(this).attr('height', '120px')
+            })
+
+            $('img.swap_image').mouseleave(function () {
+                $(this).attr('src', 'swufe.png')
+                $(this).attr('width', '420px')
+                $(this).attr('height', '120px')
+            })
         })
 
 
@@ -86,7 +94,8 @@
 </head>
 
 <body>
-    <p id="running_clock">0 days 0 hours 0 minutes 0 seconds</p>
+    <h1 id="running_clock">0 days 0 hours 0 minutes 0 seconds</h1>
+    <img src="swufe.png" alt="" class="swap_image">
 
 </body>
 
