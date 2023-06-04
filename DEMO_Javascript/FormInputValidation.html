@@ -38,14 +38,11 @@
 			var gradexamInput = document.forms[0].gradexam;
 			var isChecked = false;
 
-			// for(var i=0; i<gradexamInput.length; i++){
-			// 	if(gradexamInput[i].checked){
-			// 		isChecked = true;
-			// 		break;
-			// 	}
-			// }
-			if (gradexamInput.value != ['']){
-				isChecked = true
+			for(var i=0; i<gradexamInput.length; i++){
+				if(gradexamInput[i].checked){
+					isChecked = true;
+					break;
+				}
 			}
 
 			if(isChecked==false){
@@ -67,6 +64,7 @@
 			var x = document.forms[0]; //documnet.getElementsByTagName("form")[0];
 			x.addEventListener("submit", checkInput);
 		}
+		
 
 		document.addEventListener("DOMContentLoaded", init)
 	</script>
