@@ -22,15 +22,14 @@
     </style>
     <script>
 
-        function getTimeDiff(time1, time2) {
-            // var a = time1.getTime()
-            // var b = time2.getTime()
-            var diff = Math.abs(time1 - time2);
-            return diff / 1000;
-        }
-
-
         function updateTime() {
+
+            function getTimeDiff(time1, time2) {
+                // var a = time1.getTime()
+                // var b = time2.getTime()
+                var diff = Math.abs(time1 - time2);
+                return diff / 1000;
+            }
 
             // get the time difference
             var current_time = new Date();
@@ -53,9 +52,9 @@
 
         // window.addEventListener('load', CountDownClock)
         $(function () {
-
             // set fadeOut() function
             setInterval(updateTime, 1000);
+            
             $('#running_clock').dblclick(function () {
                 $(this).fadeOut()
             })
