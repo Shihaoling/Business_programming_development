@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form method="post" action="henryhlshi@gmail.com">
+        <section>
+        <label for="name">Please enter you name here:</label>
+            <br>
+            <input type="text" name="name" id ="name" size="50" placeholder="Firstname Lastname" autocomplete="Henry" autofocus>
+        <br>
+        <label for="password">
+            Please enter your password of credit card
+            <br>
+            <input type="password" name="password" id="password" required >
+        </label>
+        <br>
+        <label for="mail">
+            Please enter your e-mail here:
+            <br>
+            <input type="email" name="mail" id="mail">
+        </label>
+        <br>
+        <fieldset>
+            <legend>Please select the things you like</legend>    
+                <br>
+                <label for="Baseball">
+                    <input type="checkbox" name="hobby" id="Baseball"> Baseball
+                </label>
+                <label for="Basketball">
+                    <br>
+                    <input type="checkbox" name="hobby" id="Basketball"> Basketball
+                </label>
+                <label for="table_tennis">
+                    <br>
+                    <input type="checkbox" name="hobby" id="table_tennis"> Table tennis
+                </label>
+        </fieldset>
+        </section>
+        <section>
+        <br>
+        <label for="date">
+            Please select your free time so that you can play with me.
+            <br>
+            <input type="date" name="date" id="date">
+            <br>
+        </label>
+        <label for="lucky_num">
+            Your lucky number
+            <br>
+            <input type="number" name="lucky_num" id="lucky_num">
+            <br>
+        </label>
+        <label for="rating">
+            Please rate me:
+            <br>
+            <input type="range" max="10" min="0" id="rating">
+            <br>
+        </label>
+        <label for="tel">
+            Please tell me your phone:
+            <br>
+            <input type="tel" name="tel" id="tel">
+        </label>
+        <br>
+        <label for="rating">rate the website I made
+            <select name="rating" id="rating">
+                <option value="3">A</option>
+                <option value="2">B</option>
+                <option value="1">C</option>
+            </select>
+        </label>
+        <label for="submit">
+            <br>
+            <input type="submit" name="submit" value="submit" id="submit">
+        </label>
+    </section>
+    </form>
+    <p><a href="Home.html">back</a></p>
+    
+</body>
+</html>

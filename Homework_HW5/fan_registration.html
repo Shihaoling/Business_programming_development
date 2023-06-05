@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan_registration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Q1(2) -->
+    <div class="content container-fluid">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="fan_registration.html">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About_Me.html">About</a>
+            </li>
+        </ul>
+        <h1>Registration Form</h1>
+        <form method="post" action="henryhlshi@gmail.com">
+            <label for="">
+                Please enter you name here:
+                <br>
+                <input type="text" name="name" size="50" placeholder="Firstname Lastname" autocomplete="Henry"
+                    autofocus>
+            </label>
+            <br>
+            <label for="">
+                Please enter your password of credit card
+                <br>
+                <input type="password" name="password" id="password" required>
+            </label>
+            <br>
+            <label for="">
+                Please enter your e-mail here:
+                <br>
+                <input type="email" name="mail" id="mail">
+            </label>
+            <br>
+            <label for="">
+                Please select the things you like
+                <br>
+                <label for="">
+                    <input type="checkbox" name="hobby" id="Baseball"> Baseball
+                    <br>
+                    <input type="checkbox" name="hobby" id="Basketball"> Basketball
+                    <br>
+                    <input type="checkbox" name="hobby" id="table_tennis"> Table tennis
+                </label>
+            </label>
+            <br>
+            <!-- Q1(1) -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <label for="">
+                        Please select your free time so that you can play with me.
+                        <br>
+                        <input type="date" name="date" id="date">
+                        <br>
+                    </label>
+                </div>
+    
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <label for="">
+                        Your lucky number
+                        <br>
+                        <input type="number" name="lucky_num" id="lucky_num">
+                        <br>
+                    </label>
+                </div>
+    
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <label for="">
+                        Please rate me:
+                        <br>
+                        <input type="range" max="10" min="0">
+                        <br>
+                    </label>
+                </div>
+    
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <label for="">
+                        Please tell me your phone:
+                        <br>
+                        <input type="tel" name="tel" id="tel">
+                    </label>
+                </div>
+            </div>
+            
+           
+            
+            
+            <br>
+            <label for="">rate the website I made
+                <select name="rating" id="rating">
+                    <option value="3">A</option>
+                    <option value="2">B</option>
+                    <option value="1">C</option>
+                </select>
+            </label>
+            <label for="">
+                <br>
+                <input type="submit" name="submit" value="submit">
+            </label>
+        </form>
+        <p><a href="Home.html">back</a></p>
+
+    </div>
+</body>
+
+</html>
