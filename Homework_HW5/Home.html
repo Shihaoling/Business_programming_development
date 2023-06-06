@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         .name {
             text-align: center;
             color: darkgrey;
@@ -24,22 +26,31 @@
 </head>
 
 <body>
+
     <div class="content container-fluid">
 
         <!-- Q1(2) -->
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="fan_registration.html">Services</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Service</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="information.html">Facts</a></li>
+                    <li><a class="dropdown-item" href="fan_registration.html">Friend/Fan Registration</a></li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="About_Me.html">About</a>
             </li>
         </ul>
 
+
         <!-- Q1(3) -->
+        <br>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -18,18 +19,21 @@
     <div class="content container-fluid">
         <h1>Bootstarp Demo</h1>
 
-        <ul class="nav nav-pills">
+        <!-- Q1(2) -->
+        <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
+                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Service</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="information.html">Facts</a></li>
+                    <li><a class="dropdown-item" href="fan_registration.html">Friend/Fan Registration</a></li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link" href="About_Me.html">About</a>
             </li>
         </ul>
 

@@ -1,58 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function () {
+            $('img').attr('class', 'rounded-circle')
+        })
+    </script>
 </head>
+
 <body>
-    <table>
-        <thead>
-            <th>
+    <div class="content container-fluid">
+        <!-- Q1(2) -->
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Service</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item active" href="information.html">Facts</a></li>
+                    <li><a class="dropdown-item" href="fan_registration.html">Friend/Fan Registration</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About_Me.html">About</a>
+            </li>
+        </ul>
+        <table>
+            <thead>
+                <th>
+                    <tr>
+                        <th>Talents</th>
+                        <th>Examples</th>
+                        <th>image</th>
+                    </tr>
+                </th>
+            </thead>
+            <tbody>
                 <tr>
-                    <th>Talents</th>
-                    <th>Examples</th>
-                    <th>image</th>
+                    <td>Study</td>
+                    <td>
+                        <ul>
+                            <li>Machine learning</li>
+                            <li>Deep Learning</li>
+                            <li>Discrete Math</li>
+                        </ul>
+                    </td>
+                    <td><img src="extention/Andrew_Ng.jpg" alt="" height="100" width="100"></td>
                 </tr>
-            </th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Study</td>
-                <td>
-                    <ul>
-                        <li>Machine learning</li>
-                        <li>Deep Learning</li>
-                        <li>Discrete Math</li>
-                    </ul>
-                </td>
-                <td><img src="Andrew_Ng.jpg" alt="" height="100" width="100"></td>
-            </tr>
-            <tr>
-                <td>Sports</td>
-                <td>
-                    <ul>
-                        <li>Basketball</li>
-                        <li>Volleyball</li>
-                        <li>table tennis</li>
-                    </ul>
-                </td>
-                <td><img src="NBA.jpg" alt="" height="100" width="200"></td>
-            </tr>
-            <tr>
-                <td>Films</td>
-                <td>
-                    <ul>
-                        <li>Lalaland</li>
-                        <li>Mission impossible</li>
-                        <li>The Matrix</li>
-                    </ul>
-                </td>
-                <td><img src="film.jpg" alt="" height="100" width="150"></td>
-            </tr>
-        </tbody>
-    </table>
-    <p><a href="Home.html">Back</a></p>
+                <tr>
+                    <td>Sports</td>
+                    <td>
+                        <ul>
+                            <li>Basketball</li>
+                            <li>Volleyball</li>
+                            <li>table tennis</li>
+                        </ul>
+                    </td>
+                    <td><img src="extention/NBA.jpg" alt="" height="100" width="200"></td>
+                </tr>
+                <tr>
+                    <td>Films</td>
+                    <td>
+                        <ul>
+                            <li>Lalaland</li>
+                            <li>Mission impossible</li>
+                            <li>The Matrix</li>
+                        </ul>
+                    </td>
+                    <td><img src="extention/film.jpg" alt="" height="100" width="150"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Q1 (1) -->
+        <h3>My hobbies</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h6>Make progress in machine/deep learning on cousera</h6>
+                <img src="extention/cousera.jpg" alt="">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h6>Watch films</h6>
+                <img src="extention/film.jpg" alt="">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <h6>Play basketball</h6>
+                <img src="extention/NBA.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Q1(4) -->
+        <h3 class="school">Goal Universities for further study</h3>
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/cornell_logo.png" alt="" height="120px" width="150px">
+                <br>
+                <strong>Cornell University</strong>
+                <p>Cornell University is a private research university that provides an exceptional education for
+                    undergraduates and graduate and professional students.</p>
+
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/Columbia_logo.png" alt="" height="120px" width="135px">
+                <br>
+                <strong>Columbia University</strong>
+                <p>Columbia University is one of the world's most important centers of research and at the same time a
+                    distinctive and distinguished learning environment for undergraduates and graduate students in many
+                    scholarly and professional fields.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/duke_logo.jpg" alt="" height="120px" width="135px">
+                <br>
+                <strong>Duke University</strong>
+                <p>Duke University is a private research university in Durham, North Carolina.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/ucla_logo.jpg" alt="" height="120px" width="135px">
+                <br>
+                <strong>UCLA</strong>
+                <p>The University of California, Los Angeles (UCLA) is a public land-grant research university in Los
+                    Angeles, California.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/cmu_logo.jpg" alt="" height="120px" width="135px">
+                <br>
+                <strong>Carnegie Mellon University</strong>
+                <p>CMU is a global research university known for its world-class, interdisciplinary programs: arts,
+                    business, computing, engineering, humanities, policy and science.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/hku_logo.jpg" alt="" height="120px" width="135px">
+                <br>
+                <strong>The University of Hong Kong</strong>
+                <p>The University of Hong Kong is a public research university in Pok Fu Lam, Hong Kong. Founded in 1887
+                    as the Hong Kong College of Medicine for Chinese, it is the oldest tertiary institution in Hong
+                    Kong.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/cuhk_logo.png" alt="" height="120px" width="135px">
+                <br>
+                <strong>The Chinese University of Hong Kong, shenzhen</strong>
+                <p>The Chinese University of Hong Kong, Shenzhen was founded in accordance with the Regulations of the
+                    People’s Republic of China on Chinese-foreign Cooperation in Running Schools upon approval by the
+                    Ministry of Education.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/lse——logo.jpg" alt="" height="120px" width="135px">
+                <br>
+                <strong>LSE</strong>
+                <p>The London School of Economics and Political Science (LSE or the LSE) is a public research university
+                    located in London, England</p>
+            </div>
+            <div class="col-sm-6 col-md-3 col-xs-12">
+                <img src="extention/nus_logo.png" alt="" height="120px" width="200px">
+                <br>
+                <strong>National University of Singapore</strong>
+                <p>The National University of Singapore (NUS) is a national collegiate research university in
+                    Queenstown, Singapore.</p>
+            </div>
+            <p><a href="Home.html">Back</a></p>
+        </div>
 </body>
+
 </html>

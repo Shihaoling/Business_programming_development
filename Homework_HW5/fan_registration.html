@@ -9,28 +9,36 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
     </style>
-    
+
 </head>
 
 <body>
-    <!-- Q1(2) -->
+
     <div class="content container-fluid">
-        <ul class="nav nav-pills">
+        <!-- Q1(2) -->
+        <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="Home.html">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="fan_registration.html">Services</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Service</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="information.html">Facts</a></li>
+                    <li><a class="dropdown-item active" href="fan_registration.html">Friend/Fan Registration</a></li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="About_Me.html">About</a>
             </li>
         </ul>
+
         <h1>Registration Form</h1>
         <form method="post" action="henryhlshi@gmail.com">
             <label for="">
@@ -74,7 +82,7 @@
                         <br>
                     </label>
                 </div>
-    
+
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <label for="">
                         Your lucky number
@@ -83,7 +91,7 @@
                         <br>
                     </label>
                 </div>
-    
+
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <label for="">
                         Please rate me:
@@ -92,7 +100,7 @@
                         <br>
                     </label>
                 </div>
-    
+
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <label for="">
                         Please tell me your phone:
@@ -101,10 +109,10 @@
                     </label>
                 </div>
             </div>
-            
-           
-            
-            
+
+
+
+
             <br>
             <label for="">rate the website I made
                 <select name="rating" id="rating">
