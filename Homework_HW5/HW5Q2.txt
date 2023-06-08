@@ -1,0 +1,33 @@
+USE northwind;
+
+# Q2(1)
+SELECT DISTINCT SupplierID FROM `products`;
+
+#Q2(2)
+SELECT ProductName, SupplierID FROM `products`
+WHERE UnitPrice > 20;
+
+#Q2(3)
+SELECT * FROM products
+WHERE ProductName LIKE 'C%'
+AND Discontinued = 0;
+
+#Q2(4)
+SELECT Country, COUNT(*) FROM suppliers
+GROUP BY Country;
+
+#Q2(5)
+SELECT DISTINCT CompanyName, City, Country 
+FROM suppliers s INNER JOIN products p ON s.SupplierID = p.SupplierID
+WHERE p.Discontinued = 0;
+
+#Q2(6)
+INSERT INTO products(productname, supplierid, categoryid)
+VALUES ('swufe', 1, 2);
+
+#Q2(7)
+UPDATE products SET ReorderLevel=ReorderLevel*1.2, UnitPrice=UnitPrice*0.9;
+
+#Q2(8)
+DELETE FROM products 
+WHERE Discontinued=1;
