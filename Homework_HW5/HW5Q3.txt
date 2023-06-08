@@ -1,0 +1,237 @@
+PYTHON Syntax
+1.
+print
+
+2.
+if 5 > 2:
+    print("Five is greater than two!")
+
+PYTHON Comments
+1.
+#
+2.
+"""
+"""
+
+PYTHON Variables
+1.
+carname Volvo
+2.
+x=50
+3.
+x 5 +
+4.
+z z
+5.
+myfirst_name = "John"
+6.
+= = =
+7.
+global
+
+PYTHON Data Types
+1.
+int
+2.
+str
+3.
+float
+4.
+list
+5.
+tuple
+6.
+dict
+7.
+bool
+
+PYTHON Numbers
+1.
+float
+2.
+int
+3.
+complex
+
+PYTHON Strings
+1.
+len(x)
+2.
+txt[0]
+3.
+txt[2:5]
+4.
+txt.strip()
+5.
+txt.upper()
+6.
+txt.lower()
+7.
+replace 'H' 'J'
+8.
+{}
+
+PYTHON Booleans
+1.
+True
+2.
+False
+3.
+False
+4.
+True
+5.
+False
+
+PYTHON Operators
+1.
+*
+2.
+/
+3.
+in
+4.
+!=
+5.
+or
+
+PYTHON Lists
+1.
+fruits[1]
+2.
+fruits[0]="kiwi"
+3.
+fruits.append('orange')
+4.
+fruits.insert(1,
+5.
+fruits.remove('banana')
+6.
+fruits[-1]
+7.
+2:5
+8.
+len(fruits)
+
+PYTHON Tuples
+1.
+fruits[0]
+2.
+len(fruits)
+3.
+fruits[-1]
+4.
+2:5
+
+PYTHON Sets
+1.
+in
+2.
+fruits.add('orange')
+3.
+fruits.update(more_fruits)
+4.
+fruits.remove("banana")
+5.
+fruits.discard("banana")
+
+PYTHON Dictionaries
+1.
+car.get("model")
+2.
+car['year'] 2020
+3.
+car['color']='red'
+4.
+car.pop('model')
+5.
+car.clear()
+
+PYTHON If...Else
+1.
+if > :
+2.
+if != :
+3.
+if == : else:
+4.
+if == : elif >: else:
+5.
+and
+6.
+or
+7.
+if 5 > 2:
+    print("Five is greater than two!")
+8.
+if 5 > 2: print("Five is greater than two!")
+9.
+print("Yes") if 5 > 2 else print("No")
+
+PYTHON While Loops
+1.
+while :
+2.
+break
+3.
+continue
+4.
+else:
+
+PYTHON For Loops
+1.
+for in :
+2.
+continue
+3.
+range(6)
+4.
+break
+
+PYTHON Functions
+1.
+def my_function()
+2.
+my_function()
+3.
+fname
+4.
+return x + 5
+5.
+*
+6.
+**
+
+PYTHON Classes:
+1.
+class
+2.
+P1 MyClass()
+3.
+p1.x
+4.
+__init__
+
+PYTHON Inheritance
+1.
+Student(Person)
+2.
+x.printname()
+
+PYTHON Modules
+1.
+import
+2.
+as
+3.
+dir(mymodule)
+4.
+from import
+
+
+
+
+
+
+
+
