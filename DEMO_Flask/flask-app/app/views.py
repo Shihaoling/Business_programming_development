@@ -17,5 +17,5 @@ def index():
     return render_template('index.html')
 
 @app.route('/suppliers')
-def supplier():
+def suppliers():
     return render_template('suppliers.html')
