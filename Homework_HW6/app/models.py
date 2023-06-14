@@ -10,6 +10,13 @@ class Suppliers(db.Model):
     CompanyName = db.Column(db.String(40), nullable=False)
     City = db.Column(db.String(15), nullable=True)
 
+class Products(db.Model):
+    ProductID = db.Column(db.Integer, primary_key=True)
+    SupplierID = db.Column(db.Integer, foreign_key='Suppliers.SupplierID')
+    ProductName = db.Column(db.String(40), nullable=False)
+    UnitPrice = db.Column(db.Float(19, 4), nullable=True)
+    CategoryID = db.Column(db.Integer, nullable=True)
+
 # class Stats(db.Model):
 
 #     id          = db.Column(db.Integer,   primary_key=True )
