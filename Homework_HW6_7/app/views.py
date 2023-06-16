@@ -184,7 +184,14 @@ def HW7Q1():
 
 @app.route('/chart', methods=['GET', 'POST'])
 def productChart():
-    result = db.session.query(Products.ProductName.label('label'), Products.UnitsInStock.label('value')).filter(Products.SupplierID==2)
+    sid = request.form.get('SupplierID')
+    if not sid:
+        flash('Enter you supplierID')
+        suppliers = Suppliers.query.all()
+        suppliersids = sorted(set([supplier.SupplierID for supplier in suppliers]))
+        return render_template('HW7Q1.html', suppliersid =suppliersids )
+    sid = int(sid)
+    result = db.session.query(Products.ProductName.label('label'), (Products.UnitsInStock * Products.UnitPrice).label('value')).filter(Products.SupplierID==sid)
     chartData = [row._asdict() for row in result]
     chartData = json.dumps(chartData)
     return render_template('graph.html', chartData=chartData)
