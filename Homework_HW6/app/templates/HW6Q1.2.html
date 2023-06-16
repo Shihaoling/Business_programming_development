@@ -1,0 +1,61 @@
+{% extends "layouts/inner.html" %}
+
+{% block title %} My Store - Home {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main id="main">
+    <section class="inner-page">
+        <div class="container">
+            <p>
+                Example inner page template
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <h1>Form Validation with Flask</h1>
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ProductsID</th>
+                <th scope="col">ProductsName</th>
+                <th scope="col">SupplierID</th>
+                <th scope="col">UnitPrice</th>
+                <th scope="col">UnitsInStock</th>
+                <th scope="col">CategoryID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{updatedProducts.ProductID}}</td>
+                <td>{{updatedProducts.ProductName}}</td>
+                <td>{{updatedProducts.SupplierID}}</td>
+                <td>{{updatedProducts.UnitPrice}}</td>
+                <td>{{updatedProducts.UnitsInStock}}</td>
+                <td>{{updatedProducts.CategoryID}}</td>
+              </tr>
+            </tbody>
+          </table>
+        
+        {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+
+        {% endif %}
+
+        {% endwith %}
+
+</main><!-- End #main -->
+
+
+{% endblock content %}

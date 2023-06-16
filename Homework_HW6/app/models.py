@@ -16,6 +16,7 @@ class Products(db.Model):
     ProductName = db.Column(db.String(40), nullable=False)
     UnitPrice = db.Column(db.Float(19, 4), nullable=True)
     CategoryID = db.Column(db.Integer, nullable=True)
+    UnitsInStock =  db.Column(db.Integer, nullable=True)
 
 # class Stats(db.Model):
 

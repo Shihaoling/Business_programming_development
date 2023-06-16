@@ -1,0 +1,47 @@
+{% extends "layouts/inner.html" %}
+
+{% block title %} My Store - Home {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main id="main">
+<br>
+<br>
+<br>
+
+    <div class="container">
+        <h1>Login_page</h1>
+
+        <form action="{{ url_for('q2submit')}} " method="POST">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default" >SupplierID</span>
+                <input type="number" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" name="sid">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default" >CompanyName</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" name="cname">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+
+        {% endif %}
+
+        {% endwith %}
+
+</main><!-- End #main -->
+
+
+{% endblock content %}

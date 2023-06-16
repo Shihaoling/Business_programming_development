@@ -1,0 +1,56 @@
+{% extends "layouts/inner.html" %}
+
+{% block title %} My Store - Home {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main id="main">
+    <section class="inner-page">
+        <div class="container">
+            <p>
+                Example inner page template
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <h1>Form Validation with Flask</h1>
+        
+        <form class="row g-3 needs-validation" novalidate action="{{ url_for('productChart')}} " method="post">
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Supplier ID</label>
+                <select class="form-select" id="validationCustom04" name="SupplierID">
+                    <option selected disabled value>Please Select</option>
+                    {% for supplier_id in suppliersid %}
+                        {%if supplier_id == sid%}
+                            <option value= "{{supplier_id}}" selected>{{ supplier_id }}</option>
+                        {% else %}
+                            <option value= "{{supplier_id}}" >{{ supplier_id }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Chart</button>
+            </div>
+        </form>
+        
+        {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+
+        {% endif %}
+
+        {% endwith %}
+
+</main><!-- End #main -->
+
+
+{% endblock content %}
