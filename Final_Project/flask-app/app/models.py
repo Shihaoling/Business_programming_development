@@ -5,8 +5,17 @@ Copyright (c) 2019 - present AppSeed.us
 
 from app import db
 
-class Member(db.Model):
+class member(db.Model):
     MEID = db.Column(db.Integer, primary_key=True)
+    Age = db.Column(db.Integer, nullable=False)
+    FirstName = db.Column(db.String(50), nullable=False)
+    LastName = db.Column(db.String(50), nullable=False)
+    Email = db.Column(db.String(50), nullable=False)
+    MPassword = db.Column(db.String(30), nullable=False)
+    Phone = db.Column(db.String(20), nullable=False)
+    Gender = db.Column(db.String(10), nullable=False)
+    UTR = db.Column(db.Numeric, nullable=False)
+    DateOfCreation = db.Column(db.DateTime, nullable=False)
 
 class Match(db.Model):
     MAID = db.Column(db.Integer, primary_key=True)
@@ -17,7 +26,7 @@ class Challenge(db.Model):
     ChallengedMEID = db.Column(db.Integer, nullable=False)
     DateOfChallenge = db.Column(db.Date, nullable=False)
     Status = db.Column(db.Integer, nullable=False)
-    Notes = db.Column(db.String(100), nullable=True)
+    Notes = db.Column(db.String(100))
 
 class Membership(db.Model):
     MSID = db.Column(db.Integer, primary_key=True)
